@@ -21,3 +21,5 @@
 // #define USE_I2C
 
 // #define MASTER_RIGHT
+#define PERMISSIVE_HOLD
+#define TAPPING_TERM 300
