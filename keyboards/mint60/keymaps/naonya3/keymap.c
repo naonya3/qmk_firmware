@@ -78,11 +78,14 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 };
 
 void toggle_lang(void) {
-  // Change OS shortcut to  Ctr + Space
-  register_code(KC_LCTL);
+  register_code(KC_LGUI);
   register_code(KC_SPC);
-  unregister_code(KC_LCTL);
+  unregister_code(KC_LGUI);
   unregister_code(KC_SPC);
+  register_code(KC_LSFT);
+  register_code(KC_CAPS);
+  unregister_code(KC_CAPS);
+  unregister_code(KC_LSFT);
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
